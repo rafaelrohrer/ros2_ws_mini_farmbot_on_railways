@@ -1,0 +1,20 @@
+running develop
+running egg_info
+writing mini_farmbot_control.egg-info/PKG-INFO
+writing dependency_links to mini_farmbot_control.egg-info/dependency_links.txt
+writing entry points to mini_farmbot_control.egg-info/entry_points.txt
+writing requirements to mini_farmbot_control.egg-info/requires.txt
+writing top-level names to mini_farmbot_control.egg-info/top_level.txt
+reading manifest file 'mini_farmbot_control.egg-info/SOURCES.txt'
+writing manifest file 'mini_farmbot_control.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini-farmbot-control.egg-link (link to .)
+Installing fake_trajectory script to /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/mini_farmbot_control
+Installing send_test_trajectory script to /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/mini_farmbot_control
+Installing send_test_trajectory_1 script to /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/mini_farmbot_control
+
+Installed /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control
+running symlink_data
+symbolically linking /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/resource/mini_farmbot_control -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/ament_index/resource_index/packages
+symbolically linking /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/package.xml -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control
+symbolically linking /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/launch/send_test_trajectory.launch.py -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/launch

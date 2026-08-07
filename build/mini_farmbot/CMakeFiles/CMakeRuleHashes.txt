@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+bcc2faec0a58b6e4d26d1c6fdd87298f CMakeFiles/mini_farmbot_uninstall

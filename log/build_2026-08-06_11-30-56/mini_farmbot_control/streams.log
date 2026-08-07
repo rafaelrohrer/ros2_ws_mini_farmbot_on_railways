@@ -1,0 +1,19 @@
+[0.371s] Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control': PYTHONPATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build --no-deps symlink_data
+[0.522s] running develop
+[0.605s] running egg_info
+[0.606s] writing mini_farmbot_control.egg-info/PKG-INFO
+[0.606s] writing dependency_links to mini_farmbot_control.egg-info/dependency_links.txt
+[0.606s] writing entry points to mini_farmbot_control.egg-info/entry_points.txt
+[0.606s] writing requirements to mini_farmbot_control.egg-info/requires.txt
+[0.606s] writing top-level names to mini_farmbot_control.egg-info/top_level.txt
+[0.607s] reading manifest file 'mini_farmbot_control.egg-info/SOURCES.txt'
+[0.608s] writing manifest file 'mini_farmbot_control.egg-info/SOURCES.txt'
+[0.609s] running build_ext
+[0.609s] Creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini-farmbot-control.egg-link (link to .)
+[0.609s] Installing fake_trajectory script to /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/mini_farmbot_control
+[0.609s] Installing send_test_trajectory script to /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/mini_farmbot_control
+[0.610s] Installing send_test_trajectory_1 script to /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/mini_farmbot_control
+[0.610s] 
+[0.610s] Installed /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control
+[0.610s] running symlink_data
+[0.628s] Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control' returned '0': PYTHONPATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build --no-deps symlink_data

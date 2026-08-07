@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:if value="$(arg use_ros2_control)">
+        <ros2_control name="MiniFarmbotJointTrajectory1" type="system">
+            <hardware>
+                <xacro:if value="$(arg sim_mode)">
+                    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+                </xacro:if>
+                <xacro:unless value="$(arg sim_mode)">
+                    <plugin>mock_components/GenericSystem</plugin>
+                </xacro:unless>
+            </hardware>
+
+            <joint name="base_link_to_leg_front_left">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+            </joint>
+
+            <joint name="base_link_to_leg_front_right">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+            </joint>
+
+            <joint name="y_axis_to_y_to_z_connector">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+            </joint>
+
+            <joint name="y_to_z_connector_to_z_axis">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+            </joint>
+        </ros2_control>
+
+        <gazebo>
+            <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="/opt/ros/humble/lib/libign_ros2_control-system.so">
+                <parameters>$(find mini_farmbot)/config/mini_farmbot_controllers.yaml</parameters>
+            </plugin>
+        </gazebo>
+    </xacro:if>
+</robot>
