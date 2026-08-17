@@ -18,7 +18,7 @@ class JointTrajectory1Client(Node):
         self.declare_parameter(
             'joint_names',
             [
-                'base_link_to_leg_front_left',
+                'rail_left_to_leg_front_left',
                 'y_axis_to_y_to_z_connector',
                 'y_to_z_connector_to_z_axis',
             ],
@@ -26,7 +26,7 @@ class JointTrajectory1Client(Node):
         self.declare_parameter('positions', [0.2, 0.05, 0.05])
         self.declare_parameter('duration_sec', 4.0)
 
-        controller_name = self.get_parameter('controller_name').value
+        self._controller_name = str(self.get_parameter('controller_name').value)
         self._joint_names: List[str] = list(self.get_parameter('joint_names').value)
         self._positions: List[float] = [float(value) for value in self.get_parameter('positions').value]
         self._duration_sec = float(self.get_parameter('duration_sec').value)
@@ -34,7 +34,7 @@ class JointTrajectory1Client(Node):
         if len(self._joint_names) != len(self._positions):
             raise ValueError('joint_names and positions must have the same length')
 
-        action_name = f'/{controller_name}/follow_joint_trajectory'
+        action_name = f'/{self._controller_name}/follow_joint_trajectory'
         self._client = ActionClient(self, FollowJointTrajectory, action_name)
         self.get_logger().info(f'Waiting for action server: {action_name}')
 

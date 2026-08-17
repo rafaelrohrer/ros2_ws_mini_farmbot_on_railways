@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<robot name="endeffector_try_and_error" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name="gripper_body_size" value="0.04"/>
+    <xacro:property name="finger_length" value="0.03"/>
+    <xacro:property name="finger_width" value="0.01"/>
+    <xacro:property name="finger_thickness" value="0.01"/>
+    <xacro:property name="finger_side_offset" value="0.025"/>
+    
+
+    <xacro:macro name="gripper_part" params="name sx sy sz ox oy oz material_name">
+        <link name="${name}">
+            <visual>
+                <origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${sx} ${sy} ${sz}"/>
+                </geometry>
+                <material name="${material_name}"/>
+            </visual>
+            <collision>
+                <origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${sx} ${sy} ${sz}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+                <mass value="0.20"/>
+                <inertia
+                    ixx="1.2e-4"
+                    ixy="0.0"
+                    ixz="0.0"
+                    iyy="1.2e-4"
+                    iyz="0.0"
+                    izz="1.2e-4"/>
+            </inertial>
+        </link>
+
+    </xacro:macro>
+
+    <xacro:macro name="endeffector_fixed_joints" params="parent_link child_link jx:=0.0 jy:=0.0 jz:=0.0 type:=fixed">
+        <joint name="${parent_link}_to_${child_link}" type="${type}">
+            <parent link="${parent_link}"/>
+            <child link="${child_link}"/>
+            <origin xyz="${jx} ${jy} ${jz}" rpy="0 0 0"/>
+        </joint>
+    </xacro:macro>
+
+
+    <xacro:macro name="endeffector_mini_farmbot" params="parent">
+
+        <xacro:gripper_part name="gripper_body"
+            sx="${gripper_body_size}" sy="${gripper_body_size}" sz="${gripper_body_size}"
+            ox="0.0" oy="0.0" oz="0.0"
+            material_name="turquoise"/>
+
+        <xacro:gripper_part name="gripper_left_finger"
+            sx="${finger_width}" sy="${finger_thickness}" sz="${finger_length}"
+            ox="0.0" oy="0.0" oz="0.0"
+            material_name="aluminum"/>
+
+        <xacro:gripper_part name="gripper_right_finger"
+            sx="${finger_width}" sy="${finger_thickness}" sz="${finger_length}"
+            ox="0.0" oy="0.0" oz="0.0"
+            material_name="aluminum"/>
+
+        <xacro:endeffector_fixed_joints parent_link="${parent}" child_link="gripper_body"
+            jz="${-(profile_length_mini_farmbot / 2.0 + gripper_body_size / 2.0)}"/>
+        <xacro:endeffector_fixed_joints parent_link="gripper_body" child_link="gripper_left_finger"
+            jy="${finger_side_offset}" jz="${-(gripper_body_size / 2.0 + finger_length / 2.0)}"/>
+        <xacro:endeffector_fixed_joints parent_link="gripper_body" child_link="gripper_right_finger"
+            jy="${-finger_side_offset}" jz="${-(gripper_body_size / 2.0 + finger_length / 2.0)}"/>
+    </xacro:macro>
+
+    <xacro:macro name="endeffector_farmbot" params="parent">
+
+        <xacro:gripper_part name="gripper_body"
+            sx="${gripper_body_size}" sy="${gripper_body_size}" sz="${gripper_body_size}"
+            ox="0.0" oy="0.0" oz="0.0"
+            material_name="turquoise"/>
+
+        <xacro:gripper_part name="gripper_left_finger"
+            sx="${finger_width}" sy="${finger_thickness}" sz="${finger_length}"
+            ox="0.0" oy="0.0" oz="0.0"
+            material_name="aluminum"/>
+
+        <xacro:gripper_part name="gripper_right_finger"
+            sx="${finger_width}" sy="${finger_thickness}" sz="${finger_length}"
+            ox="0.0" oy="0.0" oz="0.0"
+            material_name="aluminum"/>
+        
+        <xacro:endeffector_fixed_joints parent_link="${parent}" child_link="gripper_body"
+            jz="${-(profile_length_farmbot_vertical_frame / 2.0 + gripper_body_size / 2.0)}"/>
+        
+        <xacro:endeffector_fixed_joints parent_link="gripper_body" child_link="gripper_left_finger"
+            jy="${finger_side_offset}" jz="${-(gripper_body_size / 2.0 + finger_length / 2.0)}"/>
+        
+        <xacro:endeffector_fixed_joints parent_link="gripper_body" child_link="gripper_right_finger"
+            jy="${-finger_side_offset}" jz="${-(gripper_body_size / 2.0 + finger_length / 2.0)}"/>
+    </xacro:macro>
+
+</robot>

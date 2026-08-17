@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<robot name="mini_farmbot_wheels" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<xacro:property name="wheel_radius" value="0.025"/>
+	<xacro:property name="wheel_width" value="0.015"/>
+	<xacro:property name="wheel_mass" value="0.2"/>
+
+
+	<xacro:macro name="wheel" params="name parent ox oy oz">
+		<link name="${name}">
+			<visual>
+				<origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+				<geometry>
+					<cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+				</geometry>
+				<material name="turquoise"/>
+			</visual>
+			<collision>
+				<origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+				<geometry>
+					<cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+				</geometry>
+			</collision>
+			<inertial>
+				<origin xyz="0 0 0" rpy="0 0 0"/>
+				<mass value="${wheel_mass}"/>
+				<inertia
+					ixx="${(1.0 / 2.0) * wheel_mass * (wheel_radius * wheel_radius)}"
+					ixy="0.0"
+					ixz="0.0"
+					iyy="${(1.0 / 12.0) * wheel_mass * (3.0 * wheel_radius * wheel_radius + wheel_width * wheel_width)}"
+					iyz="0.0"
+					izz="${(1.0 / 12.0) * wheel_mass * (3.0 * wheel_radius * wheel_radius + wheel_width * wheel_width)}"/>
+			</inertial>
+		</link>
+
+		<joint name="${name}_joint" type="continuous">
+			<parent link="${parent}"/>
+			<child link="${name}"/>
+			<origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+			<axis xyz="0 1 0"/>
+		</joint>
+	</xacro:macro>
+
+</robot>

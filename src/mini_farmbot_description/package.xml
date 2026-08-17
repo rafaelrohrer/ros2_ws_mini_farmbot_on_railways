@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>mini_farmbot</name>
+  <name>mini_farmbot_description</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>ROS 2 description package for mini_farmbot_description.</description>
   <maintainer email="rohreraf@students.zhaw.ch">rafaelrohrer</maintainer>
   <license>TODO: License declaration</license>
 

@@ -19,12 +19,11 @@ class JointTrajectory1Client(Node):
             'joint_names',
             [
                 'base_link_to_leg_front_left',
-                'base_link_to_leg_front_right',
                 'y_axis_to_y_to_z_connector',
                 'y_to_z_connector_to_z_axis',
             ],
         )
-        self.declare_parameter('positions', [0.2, 0.2, 0.05, 0.05])
+        self.declare_parameter('positions', [0.2, 0.05, 0.05])
         self.declare_parameter('duration_sec', 4.0)
 
         controller_name = self.get_parameter('controller_name').value

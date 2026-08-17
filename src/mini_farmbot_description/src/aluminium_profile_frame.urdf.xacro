@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<robot name="aluminium_profile_frame" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="profile_size" value="0.02"/>
+    <xacro:property name="profile_length_mini_farmbot" value="0.50"/>
+    <xacro:property name="half_span_mini_farmbot" value="${profile_length_mini_farmbot / 2.0}"/>
+
+    <xacro:property name="profile_length_farmbot_vertical_frame" value="1.0" />
+    <xacro:property name="profile_length_farmbot_y_axis" value="2.0" />
+    <xacro:property name="half_span_farmbot" value="${profile_length_farmbot_vertical_frame / 2.0}"/>
+
+    <xacro:property name="profile_mass" value="1.0"/>
+    <xacro:property name="connector_size" value="0.1"/>
+    <xacro:property name="connector_width" value="0.01"/>
+
+    <!-- Blaupause für das Einsetzen der verschiedenen Parameter (räumliche Position, Masse, geometrische Gegebenheiten) der Aluprofile -->
+    <xacro:macro name="aluminium_profile" params="name ox:=0.0 oy:=0.0 oz:=0.0 sx sy sz">
+
+        <link name="${name}">
+            <visual>
+                <origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${sx} ${sy} ${sz}"/>
+                </geometry>
+                <material name="aluminum"/>
+            </visual>
+            <collision>
+                <origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${sx} ${sy} ${sz}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+                <mass value="${profile_mass}"/>
+                <inertia
+                    ixx="${(1.0 / 12.0) * profile_mass * (sy * sy + sz * sz)}"
+                    ixy="0.0"
+                    ixz="0.0"
+                    iyy="${(1.0 / 12.0) * profile_mass * (sx * sx + sz * sz)}"
+                    iyz="0.0"
+                    izz="${(1.0 / 12.0) * profile_mass * (sx * sx + sy * sy)}"/>
+            </inertial>
+        </link>
+    </xacro:macro>
+
+    <xacro:macro name="aluminium_profile_fixed_joints" params="parent_link child_link jx:=0.0 jy:=0.0 jz:=0.0 type:=fixed">
+        <joint name="${parent_link}_to_${child_link}" type="${type}">
+            <parent link="${parent_link}"/>
+            <child link="${child_link}"/>
+            <origin xyz="${jx} ${jy} ${jz}" rpy="0 0 0"/>
+        </joint>
+    </xacro:macro>
+
+    <xacro:macro name="aluminium_profile_prismatic_joints" params="parent_link child_link jx:=0.0 jy:=0.0 jz:=0.0 ax:=0 ay:=0 az:=0 lower:=-1.0 upper:=1.0 effort:=30.0 velocity:=0.2 type:=prismatic">
+        <joint name="${parent_link}_to_${child_link}" type="${type}">
+            <parent link="${parent_link}"/>
+            <child link="${child_link}"/>
+            <origin xyz="${jx} ${jy} ${jz}" rpy="0 0 0"/>
+            <axis xyz="${ax} ${ay} ${az}"/>
+            <limit lower="${lower}" upper="${upper}" effort="${effort}" velocity="${velocity}"/>
+        </joint>
+    </xacro:macro>
+
+    <xacro:macro name="aluminium_profile_frame_mini_farmbot" params="frame_parent">
+        <xacro:aluminium_profile name="leg_front_left"
+                           sx="${profile_size}" sy="${profile_size}" sz="${profile_length_mini_farmbot}"/>
+        <xacro:aluminium_profile name="leg_front_right"
+                           sx="${profile_size}" sy="${profile_size}" sz="${profile_length_mini_farmbot}"/>
+        <xacro:aluminium_profile name="leg_back_left"
+                           sx="${profile_size}" sy="${profile_size}" sz="${profile_length_mini_farmbot}"/>
+        <xacro:aluminium_profile name="leg_back_right"
+                           sx="${profile_size}" sy="${profile_size}" sz="${profile_length_mini_farmbot}"/>
+
+        <xacro:aluminium_profile name="top_front"
+                           sx="${profile_size}" sy="${profile_length_mini_farmbot}" sz="${profile_size}"/>
+        <xacro:aluminium_profile name="top_back"
+                           sx="${profile_size}" sy="${profile_length_mini_farmbot}" sz="${profile_size}"/>
+        <xacro:aluminium_profile name="top_left"
+                           sx="${profile_length_mini_farmbot}" sy="${profile_size}" sz="${profile_size}"/>
+        <xacro:aluminium_profile name="top_right"
+                           sx="${profile_length_mini_farmbot}" sy="${profile_size}" sz="${profile_size}"/>
+
+        <xacro:aluminium_profile name="y_axis"
+                           sx="${profile_size}" sy="${profile_length_mini_farmbot}" sz="${profile_size}"/>
+
+        <xacro:aluminium_profile name="y_to_z_connector"
+                           sx="${connector_width}" sy="${connector_size}" sz="${connector_size}"/>
+
+        <xacro:aluminium_profile name="z_axis"
+                           sx="${profile_size}" sy="${profile_size}" sz="${profile_length_mini_farmbot}"/>
+
+        <xacro:aluminium_profile_prismatic_joints parent_link="${frame_parent}" child_link="leg_front_left"
+                    jx="${half_span_mini_farmbot}" jz="${half_span_mini_farmbot+(rail_width/2.0)}"
+                    ax="1"/>
+        <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="leg_front_right"
+                    jy="${-profile_length_mini_farmbot}"/>
+        <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="leg_back_left"
+                    jx="${-profile_length_mini_farmbot}"/>
+        <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="leg_back_right"
+                    jx="${-profile_length_mini_farmbot}" jy="${-profile_length_mini_farmbot}"/>
+
+        <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="top_front"
+                    jy="${-half_span_mini_farmbot}" jz="${half_span_mini_farmbot}"/>
+        <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="top_back"
+                    jx="${-profile_length_mini_farmbot}" jy="${-half_span_mini_farmbot}" jz="${half_span_mini_farmbot}"/>
+        <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="top_left"
+                    jx="${-half_span_mini_farmbot}" jy="0.0" jz="${half_span_mini_farmbot}"/>
+        <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="top_right"
+                    jx="${-half_span_mini_farmbot}" jy="${-profile_length_mini_farmbot}" jz="${half_span_mini_farmbot}"/>
+
+        <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="y_axis"
+                    jx="${-half_span_mini_farmbot}" jy="${-half_span_mini_farmbot}" jz="${half_span_mini_farmbot}"/>
+
+        <xacro:aluminium_profile_prismatic_joints parent_link="y_axis" child_link="y_to_z_connector"
+                    jx="${(profile_size / 2.0)+(connector_width / 2.0)}"
+                    ay="1"/>
+        <xacro:aluminium_profile_prismatic_joints parent_link="y_to_z_connector" child_link="z_axis"
+                    jx="${(profile_size / 2.0) + (connector_width / 2.0)}"
+                    az="1"/>
+    </xacro:macro>
+
+    <xacro:macro name="aluminium_profile_frame_farmbot" params="frame_parent">
+        <xacro:aluminium_profile name="vertical_leg_left"
+                        sx="${profile_size}" sy="${profile_size}" sz="${profile_length_farmbot_vertical_frame}"/>
+        <xacro:aluminium_profile name="vertical_leg_right"
+                        sx="${profile_size}" sy="${profile_size}" sz="${profile_length_farmbot_vertical_frame}"/>
+        
+        <xacro:aluminium_profile name="y_axis"
+                        sx="${profile_size}" sy="${profile_length_farmbot_y_axis}" sz="${profile_size}"/>
+        <xacro:aluminium_profile name="y_to_z_connector"
+                        sx="${connector_width}" sy="${connector_size}" sz="${connector_size}"/>
+        <xacro:aluminium_profile name="z_axis"
+                        sx="${profile_size}" sy="${profile_size}" sz="${profile_length_farmbot_vertical_frame}"/>
+        
+        <xacro:aluminium_profile_prismatic_joints parent_link="${frame_parent}" child_link="vertical_leg_left"
+                    jz="${half_span_farmbot+(rail_width/2.0)}"
+                    ax="1"/>
+        <xacro:aluminium_profile_fixed_joints parent_link="vertical_leg_left" child_link="vertical_leg_right"
+                    jy="${-profile_length_farmbot_y_axis}"/>
+        <xacro:aluminium_profile_fixed_joints parent_link="vertical_leg_left" child_link="y_axis"
+                    jy="-${profile_length_farmbot_y_axis/2.0}" jz="${profile_length_farmbot_vertical_frame/2.0}"/>
+        <xacro:aluminium_profile_prismatic_joints parent_link="y_axis" child_link="y_to_z_connector"
+                    jx="${(profile_size / 2.0)+(connector_width / 2.0)}"
+                    ay="1"/>
+        <xacro:aluminium_profile_prismatic_joints parent_link="y_to_z_connector" child_link="z_axis"
+                    jx="${(profile_size / 2.0) + (connector_width / 2.0)}"
+                    az="1"/>
+    </xacro:macro>
+</robot>

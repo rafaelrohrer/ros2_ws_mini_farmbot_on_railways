@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="mini_farmbot_on_aluminium_profiles" xmlns:xacro="http://www.ros.org/wiki/xacro">
+	<xacro:arg name="sim_mode" default="false"/>
+	<xacro:arg name="use_ros2_control" default="true"/>
+
+	<material name="aluminum">
+		<color rgba="0.75 0.75 0.78 1.0"/>
+	</material>
+	<material name="turquoise">
+		<color rgba="0.25 0.88 0.82 1.0"/>
+	</material>
+
+	<xacro:include filename="aluminium_profile_frame.urdf.xacro"/>
+	<xacro:include filename="endeffector.urdf.xacro"/>
+	<xacro:include filename="rails.urdf.xacro"/>
+	<xacro:include filename="ros2_control.xacro"/>
+
+	<link name="base_link"/>
+	
+	<xacro:rails_pair_mini_farmbot parent="base_link"/>
+	<xacro:aluminium_profile_frame_mini_farmbot frame_parent="rail_left"/>
+	<xacro:endeffector_mini_farmbot parent="z_axis"/>
+
+</robot>

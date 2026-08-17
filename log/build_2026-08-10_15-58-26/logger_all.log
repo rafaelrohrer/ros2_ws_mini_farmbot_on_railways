@@ -1,0 +1,271 @@
+[0.280s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'mini_farmbot_description', 'launch_file', 'mini_farmbot_control']
+[0.280s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['mini_farmbot_description', 'launch_file', 'mini_farmbot_control'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x72e04d356350>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72e04d443340>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72e04d443340>>, mixin_verb=('build',))
+[0.608s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.608s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.608s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.608s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.608s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.608s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.608s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extensions ['ignore', 'ignore_ament_install']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extension 'ignore'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extension 'ignore_ament_install'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extensions ['colcon_pkg']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extension 'colcon_pkg'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extensions ['colcon_meta']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extension 'colcon_meta'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extensions ['ros']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extension 'ros'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extensions ['cmake', 'python']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extension 'cmake'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extension 'python'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extensions ['python_setup_py']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes) by extension 'python_setup_py'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes/mini_farmbot_control) by extensions ['ignore', 'ignore_ament_install']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes/mini_farmbot_control) by extension 'ignore'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes/mini_farmbot_control) by extension 'ignore_ament_install'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes/mini_farmbot_control) by extensions ['colcon_pkg']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes/mini_farmbot_control) by extension 'colcon_pkg'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes/mini_farmbot_control) by extensions ['colcon_meta']
+[0.624s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes/mini_farmbot_control) by extension 'colcon_meta'
+[0.624s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes/mini_farmbot_control) by extensions ['ros']
+[0.624s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_nodes/mini_farmbot_control) by extension 'ros'
+[0.627s] DEBUG:colcon.colcon_core.package_identification:Package 'src/custom_nodes/mini_farmbot_control' with type 'ros.ament_python' and name 'mini_farmbot_control'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_file) by extensions ['ignore', 'ignore_ament_install']
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_file) by extension 'ignore'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_file) by extension 'ignore_ament_install'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_file) by extensions ['colcon_pkg']
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_file) by extension 'colcon_pkg'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_file) by extensions ['colcon_meta']
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_file) by extension 'colcon_meta'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_file) by extensions ['ros']
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_file) by extension 'ros'
+[0.628s] DEBUG:colcon.colcon_core.package_identification:Package 'src/launch_file' with type 'ros.ament_cmake' and name 'launch_file'
+[0.628s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_farmbot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.628s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_farmbot_description) by extension 'ignore'
+[0.628s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_farmbot_description) by extension 'ignore_ament_install'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_farmbot_description) by extensions ['colcon_pkg']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_farmbot_description) by extension 'colcon_pkg'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_farmbot_description) by extensions ['colcon_meta']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_farmbot_description) by extension 'colcon_meta'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_farmbot_description) by extensions ['ros']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_farmbot_description) by extension 'ros'
+[0.629s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_farmbot_description' with type 'ros.ament_cmake' and name 'mini_farmbot_description'
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.630s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.668s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.668s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.670s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.671s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.672s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install
+[0.674s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 345 installed packages in /opt/ros/humble
+[0.675s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_control' build argument 'cmake_args' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_control' build argument 'cmake_target' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.794s] DEBUG:colcon.colcon_core.verb:Building package 'mini_farmbot_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control', 'merge_install': False, 'path': '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/custom_nodes/mini_farmbot_control', 'symlink_install': False, 'test_result_base': None}
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_description' build argument 'cmake_args' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_description' build argument 'cmake_target' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'mini_farmbot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.794s] DEBUG:colcon.colcon_core.verb:Building package 'mini_farmbot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description', 'merge_install': False, 'path': '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/mini_farmbot_description', 'symlink_install': False, 'test_result_base': None}
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'launch_file' build argument 'cmake_args' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'launch_file' build argument 'cmake_target' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'launch_file' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'launch_file' build argument 'cmake_clean_cache' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'launch_file' build argument 'cmake_clean_first' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'launch_file' build argument 'cmake_force_configure' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'launch_file' build argument 'ament_cmake_args' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'launch_file' build argument 'catkin_cmake_args' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'launch_file' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.795s] DEBUG:colcon.colcon_core.verb:Building package 'launch_file' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file', 'merge_install': False, 'path': '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/launch_file', 'symlink_install': False, 'test_result_base': None}
+[0.795s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.796s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.796s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/custom_nodes/mini_farmbot_control' with build type 'ament_python'
+[0.796s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_farmbot_control', 'ament_prefix_path')
+[0.803s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/hook/ament_prefix_path.ps1'
+[0.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/hook/ament_prefix_path.dsv'
+[0.806s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/hook/ament_prefix_path.sh'
+[0.807s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.807s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.810s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/mini_farmbot_description' with build type 'ament_cmake'
+[0.810s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/mini_farmbot_description'
+[0.810s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.810s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.966s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/custom_nodes/mini_farmbot_control'
+[0.966s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.966s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.973s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/mini_farmbot_description -DCMAKE_INSTALL_PREFIX=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description
+[1.297s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/custom_nodes/mini_farmbot_control': PYTHONPATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/mini_farmbot_control build --build-base /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build install --record /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/install.log --single-version-externally-managed install_data
+[1.477s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/custom_nodes/mini_farmbot_control' returned '0': PYTHONPATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/mini_farmbot_control build --build-base /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build install --record /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/install.log --single-version-externally-managed install_data
+[1.483s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control' for CMake module files
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control' for CMake config files
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib'
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/bin'
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/pkgconfig/mini_farmbot_control.pc'
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages'
+[1.484s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_farmbot_control', 'pythonpath')
+[1.485s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/hook/pythonpath.ps1'
+[1.485s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/hook/pythonpath.dsv'
+[1.485s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/hook/pythonpath.sh'
+[1.487s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/bin'
+[1.487s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_farmbot_control)
+[1.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/package.ps1'
+[1.489s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/package.dsv'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/package.sh'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/package.bash'
+[1.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/package.zsh'
+[1.492s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/colcon-core/packages/mini_farmbot_control)
+[2.243s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/mini_farmbot_description -DCMAKE_INSTALL_PREFIX=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description
+[2.245s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake --build /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description -- -j20 -l20
+[2.266s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake --build /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description -- -j20 -l20
+[2.270s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake --install /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description
+[2.280s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_farmbot_description)
+[2.281s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description' for CMake module files
+[2.281s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake --install /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description
+[2.281s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description' for CMake config files
+[2.281s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_farmbot_description', 'cmake_prefix_path')
+[2.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/hook/cmake_prefix_path.ps1'
+[2.282s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/hook/cmake_prefix_path.dsv'
+[2.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/hook/cmake_prefix_path.sh'
+[2.283s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/bin'
+[2.283s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/lib/pkgconfig/mini_farmbot_description.pc'
+[2.283s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/lib/python3.10/site-packages'
+[2.283s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/bin'
+[2.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.ps1'
+[2.283s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.dsv'
+[2.284s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.sh'
+[2.284s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.bash'
+[2.284s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.zsh'
+[2.285s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/colcon-core/packages/mini_farmbot_description)
+[2.286s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_farmbot_description)
+[2.286s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description' for CMake module files
+[2.286s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description' for CMake config files
+[2.286s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_farmbot_description', 'cmake_prefix_path')
+[2.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/hook/cmake_prefix_path.ps1'
+[2.287s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/hook/cmake_prefix_path.dsv'
+[2.287s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/hook/cmake_prefix_path.sh'
+[2.287s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/bin'
+[2.287s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/lib/pkgconfig/mini_farmbot_description.pc'
+[2.287s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/lib/python3.10/site-packages'
+[2.288s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/bin'
+[2.288s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.ps1'
+[2.288s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.dsv'
+[2.288s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.sh'
+[2.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.bash'
+[2.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.zsh'
+[2.289s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/colcon-core/packages/mini_farmbot_description)
+[2.289s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/launch_file' with build type 'ament_cmake'
+[2.289s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/launch_file'
+[2.290s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.580s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file': AMENT_PREFIX_PATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description:/opt/ros/humble CMAKE_PREFIX_PATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble PYTHONPATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file -- -j20 -l20
+[2.602s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file' returned '0': AMENT_PREFIX_PATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description:/opt/ros/humble CMAKE_PREFIX_PATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble PYTHONPATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file -- -j20 -l20
+[2.604s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file': AMENT_PREFIX_PATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description:/opt/ros/humble CMAKE_PREFIX_PATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble PYTHONPATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file
+[2.613s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(launch_file)
+[2.613s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file' for CMake module files
+[2.614s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file' returned '0': AMENT_PREFIX_PATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description:/opt/ros/humble CMAKE_PREFIX_PATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble PYTHONPATH=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file
+[2.615s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file' for CMake config files
+[2.615s] Level 1:colcon.colcon_core.shell:create_environment_hook('launch_file', 'cmake_prefix_path')
+[2.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/hook/cmake_prefix_path.ps1'
+[2.615s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/hook/cmake_prefix_path.dsv'
+[2.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/hook/cmake_prefix_path.sh'
+[2.616s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/bin'
+[2.616s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/lib/pkgconfig/launch_file.pc'
+[2.616s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/lib/python3.10/site-packages'
+[2.617s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/bin'
+[2.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.ps1'
+[2.618s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.dsv'
+[2.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.sh'
+[2.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.bash'
+[2.619s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.zsh'
+[2.619s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/colcon-core/packages/launch_file)
+[2.619s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(launch_file)
+[2.619s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file' for CMake module files
+[2.620s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file' for CMake config files
+[2.621s] Level 1:colcon.colcon_core.shell:create_environment_hook('launch_file', 'cmake_prefix_path')
+[2.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/hook/cmake_prefix_path.ps1'
+[2.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/hook/cmake_prefix_path.dsv'
+[2.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/hook/cmake_prefix_path.sh'
+[2.622s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/bin'
+[2.622s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/lib/pkgconfig/launch_file.pc'
+[2.622s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/lib/python3.10/site-packages'
+[2.622s] Level 1:colcon.colcon_core.environment:checking '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/bin'
+[2.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.ps1'
+[2.624s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.dsv'
+[2.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.sh'
+[2.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.bash'
+[2.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/launch_file/package.zsh'
+[2.625s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/launch_file/share/colcon-core/packages/launch_file)
+[2.625s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.625s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.625s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.626s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.723s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[2.723s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.723s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.723s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.726s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[2.726s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.726s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/local_setup.ps1'
+[2.728s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/_local_setup_util_ps1.py'
+[2.730s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/setup.ps1'
+[2.732s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/local_setup.sh'
+[2.735s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/_local_setup_util_sh.py'
+[2.735s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/setup.sh'
+[2.737s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/local_setup.bash'
+[2.738s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/setup.bash'
+[2.739s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/local_setup.zsh'
+[2.740s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/setup.zsh'

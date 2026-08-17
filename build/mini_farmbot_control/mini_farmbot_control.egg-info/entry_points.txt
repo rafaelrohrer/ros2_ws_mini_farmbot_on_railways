@@ -1,5 +1,4 @@
 [console_scripts]
 fake_joint_trajectory_controller = mini_farmbot_control.fake_joint_trajectory_controller:main
 send_test_trajectory = mini_farmbot_control.send_joint_trajectory:main
-send_test_trajectory_1 = mini_farmbot_control.send_joint_trajectory:main
 

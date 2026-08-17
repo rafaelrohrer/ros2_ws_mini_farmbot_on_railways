@@ -19,7 +19,7 @@ class FakeJointTrajectoryController(Node):
         self.declare_parameter(
             'joint_names',
             [
-                'base_link_to_leg_front_left',
+                'rail_left_to_leg_front_left',
                 'y_axis_to_y_to_z_connector',
                 'y_to_z_connector_to_z_axis',
             ],

@@ -5,7 +5,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, ExecuteProcess, TimerAction
 from launch.conditions import IfCondition
-from launch.substitutions import Command, LaunchConfiguration, PythonExpression
+from launch.substitutions import Command, LaunchConfiguration, PythonExpression, IfElseSubstitution
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
@@ -13,20 +13,52 @@ from launch_ros.parameter_descriptions import ParameterValue
 def generate_launch_description():
     use_gazebo = LaunchConfiguration('use_gazebo')
     use_rviz = LaunchConfiguration('use_rviz')
+    robot_variant = LaunchConfiguration('robot_variant')
 
-    description_package_share = get_package_share_directory('mini_farmbot')
+    description_package_share = get_package_share_directory('mini_farmbot_description')
     launch_package_share = get_package_share_directory('launch_file')
-    xacro_file = os.path.join(
-        description_package_share,
-        'description',
-        '0_MINI_FARMBOT_ON_ALUMINIUM_PROFILES.urdf.xacro',
+
+    # Keep default mini-farmbot trajectory names intact for the controller flow,
+    # but allow a matching Farmbot RViz-only visualization when robot_variant is set
+    # to 0_FARMBOT.
+    fake_joint_names = IfElseSubstitution(
+        PythonExpression(["'", robot_variant, "' == '0_FARMBOT'"]),
+        '[rail_left_to_vertical_leg_left, y_axis_to_y_to_z_connector, y_to_z_connector_to_z_axis]',
+        '[rail_left_to_leg_front_left, y_axis_to_y_to_z_connector, y_to_z_connector_to_z_axis]'
     )
+    
+    # Determine which URDF xacro file to load based on robot_variant
+    xacro_filename = IfElseSubstitution(
+        PythonExpression(["'", robot_variant, "' == '0_FARMBOT'"]),
+        '0_FARMBOT.urdf.xacro',
+        '0_MINI_FARMBOT_ON_ALUMINIUM_PROFILES.urdf.xacro'
+    )
+
+    use_ros2_control = IfElseSubstitution(
+        PythonExpression(["'", use_gazebo, "' == 'true'"]),
+        'true',
+        'false',
+    )
+    
+    xacro_file_dir = os.path.join(
+        description_package_share,
+        'src',
+    )
+    
     rviz_config_file = os.path.join(
         launch_package_share,
         'config',
-        'mini_farmbot.rviz',
+        'mini_farmbot_description.rviz',
     )
-    robot_description = Command(['xacro ', xacro_file, ' sim_mode:=true'])
+    robot_description = Command([
+        'xacro ',
+        xacro_file_dir,
+        '/',
+        xacro_filename,
+        ' sim_mode:=true',
+        ' use_ros2_control:=',
+        use_ros2_control,
+    ])
 
     robot_state_publisher = Node(
         package='robot_state_publisher',
@@ -55,7 +87,7 @@ def generate_launch_description():
             ExecuteProcess(
                 cmd=[
                     'ros2', 'run', 'ros_gz_sim', 'create',
-                    '-name', 'mini_farmbot',
+                    '-name', 'mini_farmbot_description',
                     '-topic', 'robot_description',
                 ],
                 output='screen',
@@ -108,6 +140,7 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': ParameterValue(use_gazebo, value_type=bool),
+            'joint_names': fake_joint_names,
         }],
         condition=IfCondition(PythonExpression(["'", use_rviz, "' == 'true' and '", use_gazebo, "' == 'false'"])),
     )
@@ -125,6 +158,11 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument(
+            'robot_variant',
+            default_value='0_MINI_FARMBOT',
+            description='Robot variant to launch: 0_MINI_FARMBOT or 0_FARMBOT',
+        ),
+        DeclareLaunchArgument(
             'use_gazebo',
             default_value='true',
             description='Launch Gazebo and controllers when true',
@@ -133,6 +171,11 @@ def generate_launch_description():
             'use_rviz',
             default_value='true',
             description='Launch RViz when true',
+        ),
+        DeclareLaunchArgument(
+            'use_ros2_control',
+            default_value='false',
+            description='Explicitly enable ros2_control for controller-aware URDFs. Defaults to false for RViz-only visualization.',
         ),
         robot_state_publisher,
         gazebo,

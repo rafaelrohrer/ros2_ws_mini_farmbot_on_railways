@@ -1,0 +1,41 @@
+running egg_info
+creating ../../../build/mini_farmbot_control/mini_farmbot_control.egg-info
+writing ../../../build/mini_farmbot_control/mini_farmbot_control.egg-info/PKG-INFO
+writing dependency_links to ../../../build/mini_farmbot_control/mini_farmbot_control.egg-info/dependency_links.txt
+writing entry points to ../../../build/mini_farmbot_control/mini_farmbot_control.egg-info/entry_points.txt
+writing requirements to ../../../build/mini_farmbot_control/mini_farmbot_control.egg-info/requires.txt
+writing top-level names to ../../../build/mini_farmbot_control/mini_farmbot_control.egg-info/top_level.txt
+writing manifest file '../../../build/mini_farmbot_control/mini_farmbot_control.egg-info/SOURCES.txt'
+reading manifest file '../../../build/mini_farmbot_control/mini_farmbot_control.egg-info/SOURCES.txt'
+writing manifest file '../../../build/mini_farmbot_control/mini_farmbot_control.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build
+creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build/lib
+creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build/lib/mini_farmbot_control
+copying mini_farmbot_control/__init__.py -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build/lib/mini_farmbot_control
+copying mini_farmbot_control/send_joint_trajectory.py -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build/lib/mini_farmbot_control
+copying mini_farmbot_control/fake_joint_trajectory_controller.py -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build/lib/mini_farmbot_control
+running install
+running install_lib
+creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini_farmbot_control
+copying /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build/lib/mini_farmbot_control/__init__.py -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini_farmbot_control
+copying /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build/lib/mini_farmbot_control/send_joint_trajectory.py -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini_farmbot_control
+copying /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/build/lib/mini_farmbot_control/fake_joint_trajectory_controller.py -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini_farmbot_control
+byte-compiling /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini_farmbot_control/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini_farmbot_control/send_joint_trajectory.py to send_joint_trajectory.cpython-310.pyc
+byte-compiling /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini_farmbot_control/fake_joint_trajectory_controller.py to fake_joint_trajectory_controller.cpython-310.pyc
+running install_data
+creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/ament_index
+creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/ament_index/resource_index
+creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/ament_index/resource_index/packages
+copying resource/mini_farmbot_control -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control
+creating /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/launch
+copying launch/send_test_trajectory.launch.py -> /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/share/mini_farmbot_control/launch
+running install_egg_info
+Copying ../../../build/mini_farmbot_control/mini_farmbot_control.egg-info to /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/python3.10/site-packages/mini_farmbot_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing fake_joint_trajectory_controller script to /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/mini_farmbot_control
+Installing send_test_trajectory script to /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control/lib/mini_farmbot_control
+writing list of installed files to '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_control/install.log'

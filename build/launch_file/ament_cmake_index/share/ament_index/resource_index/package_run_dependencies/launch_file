@@ -1,1 +1,1 @@
-launch;launch_ros;ament_index_python;robot_state_publisher;xacro;ros_gz_sim;controller_manager;mini_farmbot_control;rviz2;ament_lint_auto;ament_lint_common
+launch;launch_ros;ament_index_python;robot_state_publisher;xacro;ros_gz_sim;controller_manager;mini_farmbot_description;mini_farmbot_control;rviz2;ament_lint_auto;ament_lint_common

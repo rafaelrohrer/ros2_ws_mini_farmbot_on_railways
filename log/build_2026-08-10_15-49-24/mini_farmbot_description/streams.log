@@ -1,0 +1,51 @@
+[0.009s] Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/mini_farmbot_description -DCMAKE_INSTALL_PREFIX=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description
+[0.172s] -- The C compiler identification is GNU 11.4.0
+[0.788s] -- The CXX compiler identification is GNU 11.4.0
+[1.057s] -- Detecting C compiler ABI info
+[1.143s] -- Detecting C compiler ABI info - done
+[1.147s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.147s] -- Detecting C compile features
+[1.148s] -- Detecting C compile features - done
+[1.150s] -- Detecting CXX compiler ABI info
+[1.238s] -- Detecting CXX compiler ABI info - done
+[1.242s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.243s] -- Detecting CXX compile features
+[1.243s] -- Detecting CXX compile features - done
+[1.244s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.336s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.392s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.439s] -- Added test 'lint_cmake' to check CMake code style
+[1.440s] -- Added test 'xmllint' to check XML markup files
+[1.441s] -- Configuring done
+[1.444s] -- Generating done
+[1.446s] -- Build files have been written to: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description
+[1.449s] Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/src/mini_farmbot_description -DCMAKE_INSTALL_PREFIX=/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description
+[1.451s] Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake --build /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description -- -j20 -l20
+[1.473s] Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake --build /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description -- -j20 -l20
+[1.480s] Invoking command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake --install /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description
+[1.483s] -- Install configuration: ""
+[1.484s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/src
+[1.484s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/src/rails.urdf.xacro
+[1.485s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/src/0_FARMBOT.urdf.xacro
+[1.486s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/src/ros2_control.xacro
+[1.486s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/src/aluminium_profile_frame.urdf.xacro
+[1.486s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/src/0_MINI_FARMBOT_ON_ALUMINIUM_PROFILES.urdf.xacro
+[1.486s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/src/endeffector.urdf.xacro
+[1.487s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/config
+[1.487s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/config/mini_farmbot_controllers.yaml
+[1.488s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/ament_index/resource_index/package_run_dependencies/mini_farmbot_description
+[1.488s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/ament_index/resource_index/parent_prefix_path/mini_farmbot_description
+[1.488s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/environment/ament_prefix_path.sh
+[1.489s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/environment/ament_prefix_path.dsv
+[1.489s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/environment/path.sh
+[1.489s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/environment/path.dsv
+[1.489s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/local_setup.bash
+[1.489s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/local_setup.sh
+[1.489s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/local_setup.zsh
+[1.490s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/local_setup.dsv
+[1.490s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.dsv
+[1.490s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/ament_index/resource_index/packages/mini_farmbot_description
+[1.490s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/cmake/mini_farmbot_descriptionConfig.cmake
+[1.490s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/cmake/mini_farmbot_descriptionConfig-version.cmake
+[1.490s] -- Installing: /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_description/share/mini_farmbot_description/package.xml
+[1.492s] Invoked command in '/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/install/mini_farmbot_control:/opt/ros/humble /usr/bin/cmake --install /home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description
