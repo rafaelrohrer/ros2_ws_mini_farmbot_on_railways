@@ -2,6 +2,7 @@
 <robot name="farmbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 	<xacro:arg name="sim_mode" default="false"/>
 	<xacro:arg name="use_ros2_control" default="true"/>
+	<xacro:arg name="use_arduino_hardware" default="false"/>
 
 	<material name="aluminum">
 		<color rgba="0.75 0.75 0.78 1.0"/>
@@ -13,7 +14,15 @@
 	<xacro:include filename="aluminium_profile_frame.urdf.xacro"/>
 	<xacro:include filename="endeffector.urdf.xacro"/>
 	<xacro:include filename="rails.urdf.xacro"/>
-	<xacro:include filename="ros2_control_farmbot.xacro"/>
+	<xacro:include filename="ros2_control.xacro"/>
+	<xacro:farmbot_ros2_control
+		joint_x="rail_left_to_vertical_leg_left"
+		joint_y="y_axis_to_y_to_z_connector"
+		joint_z="y_to_z_connector_to_z_axis"
+		controller_config="farmbot_controllers.yaml"
+		sim_mode="$(arg sim_mode)"
+		use_ros2_control="$(arg use_ros2_control)"
+		use_arduino_hardware="$(arg use_arduino_hardware)"/>
 
 	<link name="base_link"/>
 	

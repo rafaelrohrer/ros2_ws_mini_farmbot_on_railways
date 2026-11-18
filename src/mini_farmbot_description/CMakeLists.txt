@@ -1,21 +1,27 @@
 cmake_minimum_required(VERSION 3.8)
+
+#Der Name des Projekts muss mit dem Namen von package.xml im gleichen Paket übereinstimmen
 project(mini_farmbot_description)
 
+# Activation of compiler warnings when using GNU or Clang
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
+# find dependencies. In this case, the buildsystem ament_cmake is being loaded.
 find_package(ament_cmake REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+
+#copies the src folder into share/${PROJECT_NAME}, where PROJECT_NAME in this case is mini_farmbot_description
 install(
   DIRECTORY src
   DESTINATION share/${PROJECT_NAME}
 )
 
+ 
 install(
   DIRECTORY config
   DESTINATION share/${PROJECT_NAME}

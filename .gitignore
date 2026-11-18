@@ -1,0 +1,17 @@
+# colcon (ROS 2) – generierte Build-, Install- und Log-Ordner
+build/
+install/
+log/
+build_*/
+install_*/
+log_*/
+
+# PlatformIO – Build-Ordner und heruntergeladene Bibliotheken
+.pio/
+
+# Python
+__pycache__/
+*.pyc
+
+# Word-Sperrdateien (entstehen, solange ein Dokument geöffnet ist)
+~$*

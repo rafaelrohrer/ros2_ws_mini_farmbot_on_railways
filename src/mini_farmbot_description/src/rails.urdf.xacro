@@ -7,7 +7,7 @@
     <xacro:property name="rail_mass" value="1.0"/>
     <xacro:property name="half_span_mini_farmbot" value="${profile_length_mini_farmbot / 2.0}"/>
 
-    <xacro:macro name="rail" params="name parent ox oy oz">
+    <xacro:macro name="rail" params="name parent ox:=0.0 oy:=0.0 oz:=0.0">
         <link name="${name}">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -42,13 +42,13 @@
     </xacro:macro>
 
     <xacro:macro name="rails_pair_mini_farmbot" params="parent">
-        <xacro:rail name="rail_left" parent="${parent}" ox="0.0" oy="${half_span_mini_farmbot}" oz="${rail_width/2.0}"/>
-        <xacro:rail name="rail_right" parent="${parent}" ox="0.0" oy="-${half_span_mini_farmbot}" oz="${rail_width/2.0}"/>
+        <xacro:rail name="rail_left" parent="${parent}" oy="${half_span_mini_farmbot}" oz="${rail_width/2.0}"/>
+        <xacro:rail name="rail_right" parent="${parent}" oy="-${half_span_mini_farmbot}" oz="${rail_width/2.0}"/>
     </xacro:macro>
 
     <xacro:macro name="rails_pair_farmbot" params="parent">
-        <xacro:rail name="rail_left" parent="${parent}" ox="0.0" oy="${rail_length/2.0}" oz="${rail_width/2.0}"/>
-        <xacro:rail name="rail_right" parent="${parent}" ox="0.0" oy="-${rail_length/2.0}" oz="${rail_width/2.0}"/>
+        <xacro:rail name="rail_left" parent="${parent}" oy="${rail_length/2.0}" oz="${rail_width/2.0}"/>
+        <xacro:rail name="rail_right" parent="${parent}" oy="-${rail_length/2.0}" oz="${rail_width/2.0}"/>
     </xacro:macro>
 
 </robot>

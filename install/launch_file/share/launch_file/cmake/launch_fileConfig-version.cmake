@@ -1,1 +1,0 @@
-/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/launch_file/ament_cmake_core/launch_fileConfig-version.cmake

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<library path="mini_farmbot_system">
+  <class
+    name="mini_farmbot_hardware/MiniFarmbotSystem"
+    type="mini_farmbot_hardware::MiniFarmbotSystem"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>Initial Mini Farmbot hardware interface. Serial transport is added next.</description>
+  </class>
+</library>

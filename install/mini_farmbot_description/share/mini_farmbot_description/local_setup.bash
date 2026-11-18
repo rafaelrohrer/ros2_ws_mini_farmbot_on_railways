@@ -1,1 +1,0 @@
-/home/rafaelrohrer/bachelor_meilenstein_2/ros2_ws_mini_farmbot_on_railways/build/mini_farmbot_description/ament_cmake_environment_hooks/local_setup.bash
