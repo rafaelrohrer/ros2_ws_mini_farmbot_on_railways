@@ -6,7 +6,9 @@ namespace mini_farmbot_protocol
 
 constexpr long SERIAL_BAUD_RATE = 115200;
 constexpr unsigned int MAX_LINE_LENGTH = 128;
-constexpr unsigned long STATUS_INTERVAL_MS = 250;
+// Abstand der Positionsmeldungen waehrend einer Bewegung (10 Hz). Eine STATE-Zeile hat ca. 25 Byte;
+// bei 115200 Baud ist das weit unter der Kapazitaet und blockiert den Sendepuffer nicht.
+constexpr unsigned long STATUS_INTERVAL_MS = 100;
 constexpr long HOMING_TRAVEL_STEPS = 200000L;
 constexpr long HOMING_BACKOFF_STEPS = 400L;
 constexpr float HOMING_SPEED_STEPS_PER_SECOND = 300.0F;

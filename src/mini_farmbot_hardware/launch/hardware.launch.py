@@ -10,36 +10,45 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     description_share = get_package_share_directory('mini_farmbot_description')
-    hardware_share = get_package_share_directory('mini_farmbot_hardware')
     xacro_file = os.path.join(
         description_share, 'src', '0_MINI_FARMBOT_ON_ALUMINIUM_PROFILES.urdf.xacro'
     )
-    controllers_file = os.path.join(
-        description_share, 'config', 'mini_farmbot_controllers.yaml'
-    )
-    hardware_file = os.path.join(hardware_share, 'config', 'hardware.yaml')
+    controllers_file = os.path.join(description_share, 'config', 'controllers.yaml')
 
-    robot_description = Command([
-        'xacro ', xacro_file,
-        ' sim_mode:=false use_ros2_control:=true use_arduino_hardware:=true',
-    ])
+    device = LaunchConfiguration('device')
+
+    # Die Hardware-Parameter (Port, Baudrate, steps_per_meter) stehen in ros2_control.xacro.
+    # Der serielle Port wird hier als Xacro-Argument bis in das <param>-Feld des Plugins durchgereicht.
+    robot_description = ParameterValue(
+        Command([
+            'xacro ', xacro_file,
+            ' sim_mode:=false use_ros2_control:=true use_arduino_hardware:=true',
+            ' device:=', device,
+        ]),
+        value_type=str,
+    )
 
     return LaunchDescription([
-        DeclareLaunchArgument('device', default_value='/dev/ttyACM0'),
+        DeclareLaunchArgument(
+            'device',
+            default_value='/dev/ttyACM0',
+            description='Serieller Port des Arduino Mega (z.B. /dev/ttyACM0 oder /dev/ttyUSB0)',
+        ),
         Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
-            parameters=[{'robot_description': ParameterValue(robot_description, value_type=str)}],
+            parameters=[{'robot_description': robot_description}],
             output='screen',
         ),
         Node(
             package='controller_manager',
             executable='ros2_control_node',
             parameters=[
-                {'robot_description': ParameterValue(robot_description, value_type=str)},
+                {'robot_description': robot_description},
                 controllers_file,
-                hardware_file,
-                {'device': LaunchConfiguration('device')},
+                # Muss nach controllers_file stehen: Der echte Roboter hat keine Simulationsuhr,
+                # deshalb wird use_sim_time aus der (auch für Gazebo genutzten) YAML überschrieben.
+                {'use_sim_time': False},
             ],
             remappings=[('robot_description', '/robot_description')],
             output='screen',

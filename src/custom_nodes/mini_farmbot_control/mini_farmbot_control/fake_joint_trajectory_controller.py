@@ -18,11 +18,7 @@ class FakeJointTrajectoryController(Node):
         self.declare_parameter('controller_name', 'joint_trajectory_controller')
         self.declare_parameter(
             'joint_names',
-            [
-                'rail_left_to_leg_front_left',
-                'y_axis_to_y_to_z_connector',
-                'y_to_z_connector_to_z_axis',
-            ],
+            ['x_joint', 'y_joint', 'z_joint'],
         )
         self.declare_parameter('publish_rate_hz', 20.0)
         self.declare_parameter('default_positions', [0.0, 0.0, 0.0])

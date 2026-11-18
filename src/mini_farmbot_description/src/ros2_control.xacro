@@ -9,7 +9,7 @@
     </xacro:macro>
 
     <xacro:macro name="farmbot_ros2_control"
-                 params="joint_x joint_y joint_z controller_config sim_mode:=false use_ros2_control:=true use_arduino_hardware:=false">
+                 params="controller_config:=controllers.yaml sim_mode:=false use_ros2_control:=true use_arduino_hardware:=false device:=/dev/ttyACM0">
         <xacro:if value="${use_ros2_control}">
             <ros2_control name="MiniFarmbotJointTrajectory1" type="system">
                 <hardware>
@@ -18,7 +18,8 @@
                     </xacro:if>
                     <xacro:if value="${use_arduino_hardware}">
                         <plugin>mini_farmbot_hardware/MiniFarmbotSystem</plugin>
-                        <param name="device">/dev/ttyACM0</param>
+                        <!-- Einzige Quelle für die Hardware-Parameter: das Plugin liest nur diese <param>-Einträge. -->
+                        <param name="device">${device}</param>
                         <param name="baud_rate">115200</param>
                         <param name="x_steps_per_meter">60000.0</param>
                         <param name="y_steps_per_meter">60000.0</param>
@@ -32,9 +33,10 @@
                     </xacro:unless>
                 </hardware>
 
-                <xacro:ros2_joint_control name="${joint_x}"/>
-                <xacro:ros2_joint_control name="${joint_y}"/>
-                <xacro:ros2_joint_control name="${joint_z}"/>
+                <!-- Reihenfolge X, Y, Z ist relevant: das Hardware-Plugin ordnet die Achsen über den Index zu. -->
+                <xacro:ros2_joint_control name="x_joint"/>
+                <xacro:ros2_joint_control name="y_joint"/>
+                <xacro:ros2_joint_control name="z_joint"/>
             </ros2_control>
 
             <xacro:if value="${sim_mode}">

@@ -18,15 +18,6 @@ def generate_launch_description():
     description_package_share = get_package_share_directory('mini_farmbot_description')
     launch_package_share = get_package_share_directory('launch_file')
 
-    # Keep default mini-farmbot trajectory names intact for the controller flow,
-    # but allow a matching Farmbot RViz-only visualization when robot_variant is set
-    # to 0_FARMBOT.
-    fake_joint_names = IfElseSubstitution(
-        PythonExpression(["'", robot_variant, "' == '0_FARMBOT'"]),
-        '[rail_left_to_vertical_leg_left, y_axis_to_y_to_z_connector, y_to_z_connector_to_z_axis]',
-        '[rail_left_to_leg_front_left, y_axis_to_y_to_z_connector, y_to_z_connector_to_z_axis]'
-    )
-    
     # Determine which URDF xacro file to load based on robot_variant
     xacro_filename = IfElseSubstitution(
         PythonExpression(["'", robot_variant, "' == '0_FARMBOT'"]),
@@ -140,7 +131,6 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': ParameterValue(use_gazebo, value_type=bool),
-            'joint_names': fake_joint_names,
         }],
         condition=IfCondition(PythonExpression(["'", use_rviz, "' == 'true' and '", use_gazebo, "' == 'false'"])),
     )

@@ -52,8 +52,10 @@
         </joint>
     </xacro:macro>
 
-    <xacro:macro name="aluminium_profile_prismatic_joints" params="parent_link child_link jx:=0.0 jy:=0.0 jz:=0.0 ax:=0 ay:=0 az:=0 lower:=-1.0 upper:=1.0 effort:=30.0 velocity:=0.2 type:=prismatic">
-        <joint name="${parent_link}_to_${child_link}" type="${type}">
+    <!-- Bewegliche Achsen erhalten einen festen, rollenbasierten Namen (x_joint, y_joint, z_joint),
+         damit Controller, Hardware-Plugin und Nodes unabhängig von den verbundenen Links und der Variante sind. -->
+    <xacro:macro name="aluminium_profile_prismatic_joints" params="name parent_link child_link jx:=0.0 jy:=0.0 jz:=0.0 ax:=0 ay:=0 az:=0 lower:=-1.0 upper:=1.0 effort:=30.0 velocity:=0.2 type:=prismatic">
+        <joint name="${name}" type="${type}">
             <parent link="${parent_link}"/>
             <child link="${child_link}"/>
             <origin xyz="${jx} ${jy} ${jz}" rpy="0 0 0"/>
@@ -90,7 +92,7 @@
         <xacro:aluminium_profile name="z_axis"
                            sx="${profile_size}" sy="${profile_size}" sz="${profile_length_mini_farmbot}"/>
 
-        <xacro:aluminium_profile_prismatic_joints parent_link="${frame_parent}" child_link="leg_front_left"
+        <xacro:aluminium_profile_prismatic_joints name="x_joint" parent_link="${frame_parent}" child_link="leg_front_left"
                     jx="${half_span_mini_farmbot}" jz="${half_span_mini_farmbot+(rail_width/2.0)}"
                     ax="1"/>
         <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="leg_front_right"
@@ -112,10 +114,10 @@
         <xacro:aluminium_profile_fixed_joints parent_link="leg_front_left" child_link="y_axis"
                     jx="${-half_span_mini_farmbot}" jy="${-half_span_mini_farmbot}" jz="${half_span_mini_farmbot}"/>
 
-        <xacro:aluminium_profile_prismatic_joints parent_link="y_axis" child_link="y_to_z_connector"
+        <xacro:aluminium_profile_prismatic_joints name="y_joint" parent_link="y_axis" child_link="y_to_z_connector"
                     jx="${(profile_size / 2.0)+(connector_width / 2.0)}"
                     ay="1"/>
-        <xacro:aluminium_profile_prismatic_joints parent_link="y_to_z_connector" child_link="z_axis"
+        <xacro:aluminium_profile_prismatic_joints name="z_joint" parent_link="y_to_z_connector" child_link="z_axis"
                     jx="${(profile_size / 2.0) + (connector_width / 2.0)}"
                     az="1"/>
     </xacro:macro>
@@ -133,17 +135,17 @@
         <xacro:aluminium_profile name="z_axis"
                         sx="${profile_size}" sy="${profile_size}" sz="${profile_length_farmbot_vertical_frame}"/>
         
-        <xacro:aluminium_profile_prismatic_joints parent_link="${frame_parent}" child_link="vertical_leg_left"
+        <xacro:aluminium_profile_prismatic_joints name="x_joint" parent_link="${frame_parent}" child_link="vertical_leg_left"
                     jz="${half_span_farmbot+(rail_width/2.0)}"
                     ax="1"/>
         <xacro:aluminium_profile_fixed_joints parent_link="vertical_leg_left" child_link="vertical_leg_right"
                     jy="${-profile_length_farmbot_y_axis}"/>
         <xacro:aluminium_profile_fixed_joints parent_link="vertical_leg_left" child_link="y_axis"
                     jy="-${profile_length_farmbot_y_axis/2.0}" jz="${profile_length_farmbot_vertical_frame/2.0}"/>
-        <xacro:aluminium_profile_prismatic_joints parent_link="y_axis" child_link="y_to_z_connector"
+        <xacro:aluminium_profile_prismatic_joints name="y_joint" parent_link="y_axis" child_link="y_to_z_connector"
                     jx="${(profile_size / 2.0)+(connector_width / 2.0)}"
                     ay="1"/>
-        <xacro:aluminium_profile_prismatic_joints parent_link="y_to_z_connector" child_link="z_axis"
+        <xacro:aluminium_profile_prismatic_joints name="z_joint" parent_link="y_to_z_connector" child_link="z_axis"
                     jx="${(profile_size / 2.0) + (connector_width / 2.0)}"
                     az="1"/>
     </xacro:macro>

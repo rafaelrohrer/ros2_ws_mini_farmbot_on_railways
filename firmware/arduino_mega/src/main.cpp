@@ -47,6 +47,7 @@ long active_command_id = 0;
 bool move_active = false;
 bool homing_active = false;
 bool fault_active = false;
+bool was_busy = false;
 
 bool limit_is_active(const Axis & axis)
 {
@@ -72,6 +73,22 @@ bool all_axes_homed()
     }
   }
   return true;
+}
+
+bool controller_busy()
+{
+  return homing_active || any_axis_busy();
+}
+
+const char * current_state_name()
+{
+  if (fault_active) {
+    return "ERROR";
+  }
+  if (homing_active) {
+    return "HOMING";
+  }
+  return any_axis_busy() ? "MOVING" : "IDLE";
 }
 
 void print_positions(const char * state)
@@ -197,7 +214,7 @@ void handle_command(char * command)
   if (strcmp(operation, "PING") == 0) {
     Serial.println("PONG");
   } else if (strcmp(operation, "STATUS") == 0) {
-    print_positions(fault_active ? "ERROR" : (any_axis_busy() ? "MOVING" : "IDLE"));
+    print_positions(current_state_name());
   } else if (strcmp(operation, "STOP") == 0) {
     stop_all_axes();
     Serial.println("ACK STOP");
@@ -287,16 +304,22 @@ void run_motors()
   }
 }
 
-void publish_periodic_status()
+// Meldet die Position periodisch, solange sich etwas bewegt (Fahrt, Homing, Abbremsen nach STOP),
+// und genau einmal beim Stillstand. Ohne diese letzte Meldung bliebe in ROS die Position der
+// letzten periodischen Meldung stehen, also bis zu STATUS_INTERVAL_MS vor dem tatsaechlichen Ziel.
+void publish_status()
 {
-  const unsigned long now = millis();
-  if (now - last_status_time < mini_farmbot_protocol::STATUS_INTERVAL_MS) {
-    return;
+  const bool busy = controller_busy();
+  if (busy) {
+    const unsigned long now = millis();
+    if (now - last_status_time >= mini_farmbot_protocol::STATUS_INTERVAL_MS) {
+      last_status_time = now;
+      print_positions(current_state_name());
+    }
+  } else if (was_busy) {
+    print_positions(current_state_name());
   }
-  last_status_time = now;
-  if (move_active || homing_active || fault_active) {
-    print_positions(fault_active ? "ERROR" : (homing_active ? "HOMING" : "MOVING"));
-  }
+  was_busy = busy;
 }
 }  // namespace
 
@@ -322,5 +345,5 @@ void loop()
   read_serial_commands();
   run_homing();
   run_motors();
-  publish_periodic_status();
+  publish_status();
 }
